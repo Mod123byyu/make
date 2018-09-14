@@ -828,9 +828,14 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.product.device")
 
-  script.Print("----------------------------------------------");
-  script.Print("              Pixel Experience");
-  script.Print("               by jhenrique09");
+  script.Print("______ ___   __     _   _        _____ _____ ");
+  script.Print("| ___ (_\ \ / /    | \ | |      |  _  /  ___|");
+  script.Print("| |_/ /_ \ V /  ___|  \| |______| | | \ `--. ");
+  script.Print("|  __/| |/   \ / _ | . ` |______| | | |`--. \ ");
+  script.Print("| |   | / /^\ |  __| |\  |      \ \_/ /\__/ / ");
+  script.Print("\_|   |_\/   \/\___\_| \_/       \___/\____/ ");
+  script.Print("                                             ");
+  script.Print("---------------By drpradsms--------------------");
   script.Print("----------------------------------------------");
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Build id: %s"%(build_id));
@@ -856,6 +861,11 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     system_progress -= 0.1
   if HasVendorPartition(input_zip):
     system_progress -= 0.1
+
+  model = target_info.GetBuildProp("ro.product.model")
+  build = target_info.GetBuildProp("ro.build.date")
+
+
 
   script.ShowProgress(system_progress, 0)
 
